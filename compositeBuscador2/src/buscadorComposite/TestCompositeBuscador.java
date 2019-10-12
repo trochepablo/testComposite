@@ -17,9 +17,7 @@ class TestCompositeBuscador {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		
-		// buscador = new Buscador(filtros);
-		// 
+
 	}
 
 	@Test
@@ -30,7 +28,7 @@ class TestCompositeBuscador {
 		ciudad = "09/04/2019";
 		
 		// filtros = new Criterio(ciudad, fechaEntrada, fechaSalida);
-		
+		buscador = new Buscador(filtros);
 		// TODO:
 		// busqueda con campos requeridos: 
 		// buscador.buscar(publicaciones)
@@ -47,7 +45,7 @@ class TestCompositeBuscador {
 		precioMax = 100;
 		
 		// filtros = new Criterio(ciudad, fechaEntrada, fechaSalida, precioMin, precioMax);
-		
+		buscador = new Buscador(filtros);
 		//TODO:
 		// busqueda anidando precio min y max:
 		// buscarPrecio = new BuscarPrecioDecorer(buscador);
