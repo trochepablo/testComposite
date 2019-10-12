@@ -1,5 +1,7 @@
 package buscadorComposite;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,10 +16,13 @@ class TestCompositeBuscador {
 	String fechaSalida;
 	Integer precioMin;
 	Integer precioMax;
+	
+	List<Publicacion> publicaciones;
 
 	@BeforeEach
 	void setUp() throws Exception {
-
+		// publicaciones = new List<Publicacion>();
+		// publicaciones.add(new Publicacion())
 	}
 
 	@Test
