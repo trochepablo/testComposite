@@ -12,12 +12,8 @@ public class BuscarPrecioDecorer extends BuscarBaseDecorer  {
 	@Override
 	public List<Publicacion> Buscar(List<Publicacion> publicaciones){
 		// TODO:
-		//return  publicaciones.filter(s => s.ciudadDestino == criterio.ciudadDestino &&
-		//							 s.fechaIngreso == criterio.fechaIngreso &&											
-		//						     s.fechaSalida ==  crioterio.fechaSalida &&
-		//							 s.precio >= criterio.precioMinimo &&
-		//							 s.precio <= criterio.precioMaximo)
-		//
+		//super().Buscar(publicaciones).filter(s.precio >= criterio.precioMinimo &&
+		//							           s.precio <= criterio.precioMaximo)
 		return publicaciones;
 	}
 
