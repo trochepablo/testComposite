@@ -6,4 +6,5 @@ public class Criterio {
 	public String fechaSalida;
 	public Integer precioMin;
 	public Integer precioMax;
+	public Integer cantHuesped;
 }

@@ -5,4 +5,5 @@ public class Publicacion {
 	public String fechaEntrada;
 	public String fechaSalida;
 	public Integer precio;
+	public Integer cantHuesped;
 }
