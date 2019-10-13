@@ -29,14 +29,23 @@ class TestCompositeBuscador {
 		publicacion1.ciudadDestino = "BA";
 		publicacion1.fechaEntrada = "1";
 		publicacion1.fechaSalida = "2";
+		publicacion1.precio = 5;
 		
 		Publicacion publicacion2 = new Publicacion();
 		publicacion2.ciudadDestino = "UY";
 		publicacion2.fechaEntrada = "1";
 		publicacion2.fechaSalida = "2";
+		publicacion2.precio = 50;
+
+		Publicacion publicacion3 = new Publicacion();
+		publicacion3.ciudadDestino = "UY";
+		publicacion3.fechaEntrada = "1";
+		publicacion3.fechaSalida = "2";
+		publicacion3.precio = 105;
 		
 		publicaciones.add(publicacion1);
 		publicaciones.add(publicacion2);
+		publicaciones.add(publicacion3);
 		
 		testBusquedaDefault();
 	}
@@ -49,6 +58,8 @@ class TestCompositeBuscador {
 		filtros.ciudadDestino = "BA";
 		filtros.fechaEntrada = "1";
 		filtros.fechaSalida= "2";
+		filtros.precioMin = 0;
+		filtros.precioMax = 100;
 
 		buscador = new Buscador();
 		
@@ -62,18 +73,22 @@ class TestCompositeBuscador {
 	@Test
 	void testBusquedaPrecio() {
 		
-		ciudad = "Buenos Aires";
-		fechaEntrada = "01/04/2019";
-		ciudad = "09/04/2019";
-		precioMin = 50;
-		precioMax = 100;
+		filtros = new Criterio();
 		
-		// filtros = new Criterio(ciudad, fechaEntrada, fechaSalida, precioMin, precioMax);
+		filtros.ciudadDestino = "BA";
+		filtros.fechaEntrada = "1";
+		filtros.fechaSalida= "2";
+		filtros.precioMin = 0;
+		filtros.precioMax = 100;
+			
 		buscador = new Buscador();
+		
 		//TODO:
 		// busqueda anidando precio min y max:
-		// buscarPrecio = new BuscarPrecioDecorer(buscador);
-		// buscarPrecio.buscar(publicaciones)
+		buscarPrecio = new BuscarPrecioDecorer(buscador);
+		List<Publicacion> resultado = buscarPrecio.Buscar(publicaciones, filtros);
+		
+		assertEquals(1, resultado.size());
 		
 	}
 	
