@@ -46,8 +46,7 @@ class TestCompositeBuscador {
 		publicaciones.add(publicacion1);
 		publicaciones.add(publicacion2);
 		publicaciones.add(publicacion3);
-		
-		testBusquedaDefault();
+
 	}
 
 	@Test
