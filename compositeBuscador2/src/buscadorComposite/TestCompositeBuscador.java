@@ -106,9 +106,7 @@ class TestCompositeBuscador {
 		filtros.cantHuesped = 4;
 			
 		buscador = new Buscador();
-		
-		//TODO:
-		// busqueda anidando precio min y max:
+	
 		buscarPrecio = new BuscarPrecioDecorer(buscador);
 		buscarHuesped = new BuscarCantHuespedDecorer(buscarPrecio);
 		List<Publicacion> resultado = buscarHuesped.Buscar(publicaciones, filtros);
