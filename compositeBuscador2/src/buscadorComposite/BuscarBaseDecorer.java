@@ -10,8 +10,8 @@ public class BuscarBaseDecorer implements IBuscador {
 	}
 	
 	@Override 
-	public List<Publicacion> Buscar(List<Publicacion> publicaciones){
-		return this.envoltura.Buscar(publicaciones);
+	public List<Publicacion> Buscar(List<Publicacion> publicaciones, Criterio criterio){
+		return this.envoltura.Buscar(publicaciones, criterio);
 	}
 
 }
